@@ -19,131 +19,123 @@ body {
   width: 360px;
   max-width: 100%;
   animation: fadeIn 1s ease-in-out;
+}
 
-  h2 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    font-weight: 700;
+.container h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container select, .container input, .container button {
+  width: 90%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #3498db;
+  font-size: 1rem;
+  background-color: #ecf0f1;
+  transition: all 0.3s;
+  margin-bottom: 20px;
+}
+
+.container select:focus, .container input:focus {
+  border-color: #2980b9;
+  outline: none;
+  background-color: #fff;
+}
+
+.container button {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.container .retry-button {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.container .retry-icon {
+  margin-right: 10px;
+}
+
+.container .message {
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.container .message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.container .message.failure {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.container p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.container p:nth-of-type(2) {
+  color: #2980b9;
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  select, input, button {
+@media (max-width: 600px) {
+  .container {
     width: 90%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 2px solid #3498db;
-    font-size: 1rem;
-    background-color: #ecf0f1;
-    transition: all 0.3s;
-    margin-bottom: 20px;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
-  select:focus, input:focus {
-    border-color: #2980b9;
-    outline: none;
-    background-color: #fff;
+  .container h2 {
+    font-size: 1.8rem;
   }
 
-  button {
-    background-color: #3498db;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-
-    &:hover {
-      background-color: #2980b9;
-    }
-
-    &:active {
-      transform: scale(0.98);
-    }
+  .container select, .container input, .container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
   }
 
-  .retry-button {
-    background-color: #e74c3c;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-
-    &:hover {
-      background-color: #c0392b;
-    }
-
-    &:active {
-      transform: scale(0.98);
-    }
+  .container button {
+    width: 100%;
   }
 
-  .retry-icon {
-    margin-right: 10px;
+  .container .retry-button {
+    font-size: 0.9rem;
   }
 
-  .message {
-    margin: 15px 0;
-    padding: 12px;
-    border-radius: 8px;
-    font-weight: 600;
-
-    &.success {
-      background-color: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-    }
-
-    &.failure {
-      background-color: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-    }
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-
-    &:nth-of-type(2) {
-      color: #2980b9;
-      font-weight: 600;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-
-  @media (max-width: 600px) {
-    .container {
-        padding: 20px;
-        width: 90%; 
-        max-width: 90%;
-      }
-    h2 {
-      font-size: 2rem;
-    }
-
-    select, input, button {
-      padding: 10px;
-      font-size: 0.9rem;
-    }
-
-    .retry-button {
-      font-size: 0.9rem;
-    }
-
-    .message {
-      font-size: 1rem;
-    }
+  .container .message {
+    font-size: 0.8rem;
   }
 }
